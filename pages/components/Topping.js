@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
+import {motion} from "framer-motion"
 const Toppings = () => {
   let toppings = [
     "mushrooms",
@@ -36,7 +36,7 @@ const Toppings = () => {
       </ul>
 
       <Link href="./Order">
-        <button>Order</button>
+        <motion.button initial={{x: "-100vw"}} animate={{x:0}}>Order</motion.button>
       </Link>
     </div>
   );

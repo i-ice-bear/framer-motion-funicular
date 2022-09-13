@@ -1,19 +1,23 @@
-import React from 'react';
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="home container">
-      <h2>
-        Welcome to Pizza Joint
-      </h2>
+    <motion.div
+      className="home container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ delay:1, duration:2 }}
+    >
+      <motion.h2>Welcome to Framer Pizza</motion.h2>
       <Link href="./components/Base">
-        <button>
+        <motion.button initial={{ opacity: 0.5 }} animate={{ opacity: 1 }}>
           Create Your Pizza
-        </button>
+        </motion.button>
       </Link>
-    </div>
-  )
-}
+    </motion.div>
+  );
+};
 
 export default Home;
