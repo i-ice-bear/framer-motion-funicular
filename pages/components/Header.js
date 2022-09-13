@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+
 const Header = () => {
   return (
     <header>
@@ -11,13 +12,16 @@ const Header = () => {
         >
           <motion.path
             fill="none"
-            transition={{ delay: 1 }}
-            initial={{ opacity: 0.2, rotateZ: 180 }}
+            transition={{ delay: 1, repeat: Infinity, repeatDelay: 2 }}
+            initial={{
+              opacity: 0.2,
+              rotateZ: 180,
+            }}
             animate={{ opacity: 1, rotateZ: 0 }}
             d="M40 40 L80 40 C80 40 80 80 40 80 C40 80 0 80 0 40 C0 40 0 0 40 0Z"
           />
           <motion.path
-            transition={{ delay: 0.5 }}
+            transition={{ delay: 0.5, repeat: Infinity, repeatDelay:2 }}
             initial={{ opacity: 0.2, rotateZ: 180 }}
             animate={{ opacity: 1, rotateZ: 0 }}
             fill="none"
@@ -27,7 +31,7 @@ const Header = () => {
       </div>
       <motion.div
         className="title"
-        transition={{ delay: 0.2, type: "spring", stiffness: 500}}
+        transition={{ delay: 0.2, type: "spring", stiffness: 500 }}
         initial={{ y: -250 }}
         animate={{ y: -10 }}
       >
